@@ -1,0 +1,31 @@
+##########################################################################
+#EXAMPLE OF DOCKERFILE
+FROM node:16.15.1
+
+# Create app directory
+WORKDIR /usr/src/app
+
+#copy
+COPY package.json ./
+COPY package-lock.json ./
+COPY ./ ./
+
+#run npm install
+RUN npm install --force --legacy-peer-deps
+# RUN npm install craco
+
+# EXPOSE 3000
+
+# RUN apt-get update
+# RUN apt-get upgrade
+# RUN apt-get install build-essential
+
+CMD ["npm","run", "start"]
+
+
+##########################################################################
+# docker build command:
+docker build -t <mynodeappimage> .
+
+# docker run command:
+docker run -it --rm -p 4001:3000 --name <myrunningnode> <mynodeappimage>
