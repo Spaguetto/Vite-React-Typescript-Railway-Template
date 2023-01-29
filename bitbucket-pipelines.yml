@@ -9,5 +9,4 @@ pipelines:
             - git clone git@bitbucket.org:visitor1/visitor-front.git
             - ls
             - cd visitor-front
-            - git remote add github git@github.com:Spaguetto/Vite-React-Typescript-Railway-Template.git
-            - git push --mirror
+            - git push --mirror git@github.com:Spaguetto/Vite-React-Typescript-Railway-Template.git
