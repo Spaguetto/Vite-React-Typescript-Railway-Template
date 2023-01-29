@@ -7,6 +7,7 @@ pipelines:
           name: Clone to GitHub
           script:
             - git clone git@bitbucket.org:visitor1/visitor-back.git
+            - ls
             - cd Vite-React-Typescript-Railway-Template
             - git remote add github git@github.com:Spaguetto/Vite-React-Typescript-Railway-Template.git
             - git push -u github main
